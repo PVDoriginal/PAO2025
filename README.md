@@ -1,100 +1,36 @@
 # Proiect PAO 2025
 
-[cerintele proiectului] (https://github.com/deeas/PAO-2025/blob/master/Programare%20avansata%20pe%20obiecte%20-%20proiect%202025.pdf)
+[cerintele proiectului](https://github.com/deeas/PAO-2025/blob/master/Programare%20avansata%20pe%20obiecte%20-%20proiect%202025.pdf)
 
-# Adapost de Animale / Animal Shelter 
+# Adapost de Animale  
 
-I'll be making a java project that handles the operations of an animal shelter. 
+Am facut un proiect in Java ce modeleaza un adapost de animale. 
 
-Users (Staff Members) will be able to do the following actions:
+Se pot apela urmatoarele servicii:
 
-- Get a list of all the animals rescued in a specific shelter
-- Get a list of all the animals that aren't adopted yet
-- Get a list of all the employees in a specific shelter
-- Get a list of all the people who have rescued animals
-- Get a list of all appointments in a specific shelter
-- Add a new person or staff member
-- Assign a pet to a staff member
-- Add a new rescue
-- Add a new adoption
-- Add a new appointment
+1. O persoana aduce un animal de pe strada la adapost 
+2. O persoana adopta un animal de la adapost 
+3. O persoana cumpara un produs (mancare sau vaccin) de la adapost
+4. Un adapost se aprovizioneaza cu un nou produs
+5. Se obtine o lista cu toate animalele dintr-un adapost
+6. Se obtine o lista sortata a platilor catre un angajat 
+7. Se verifica daca un produs este mancare sau nu 
+8. O persoana este angajata la adapost
+9. Se plateste salariul unui angajat
+10. Se obtin toate animalele dintr-o anumita specie
   
 ```mermaid
 erDiagram
-    PERSON ||--o{ APPOINTMENT : IsAppointed
-    SHELTER ||--o{ APPOINTMENT : HasAppointment
-
-    PERSON ||--o{ ADOPTION : Adopts
-    ANIMAL ||--o| ADOPTION : IsAdopted
-
-    PERSON ||--o{ RESCUE : Rescues
-    ANIMAL ||--o| RESCUE : IsRescued
+    PERSON ||--o{ ANIMAL : Adopts
+    PERSON ||--o{ ANIMAL : Rescues
 
     STAFF ||--o{ PAYMENT : IsPaid
+    PERSON ||--|| STAFF : IsA
+    SHELTER ||--o{ PRODUCT:  Has
 
-    STAFF ||--|| PERSON : IsA
-    STAFF ||--o{ ANIMAL : TakesCare
+    STAFF }o--|| SHELTER : WorksAt
+    SHELTER ||--o{ ANIMAL : Has 
 
-    SHELTER }|--|| STAFF : Works
-    SHELTER ||--o{ ANIMAL : Shelters  
-
-    ANIMAL ||--o{ TRANSFER : IsTransfered
-    SHELTER ||--o{ TRANSFER : Transfered
-
-    PERSON {
-      ulong person_id pk
-      varchar firstname
-      varchar lastname
-      varchar email
-      varchar password
-    }
-    ANIMAL {
-      ulong animal_id pk
-      varchar name
-      varchar description
-      enum species
-    }
-    STAFF {
-      ulong staff_id pk 
-      ulong person_id fk
-      datetime employment_date
-      int salary
-    }
-    RESCUE {
-      ulong rescue_id pk 
-      ulong person_id fk
-      ulong animal_id fk
-      datetime rescue_date
-    }
-    ADOPTION {
-      ulong adoption_id pk
-      ulong person_id fk
-      ulong animal_id fk 
-      datetime adoption_date
-    }
-    SHELTER {
-      ulong shelter_id pk
-      varchar name 
-      varchar address
-    }
-    PAYMENT {
-      ulong payment_id pk
-      ulong staff_id fk 
-      number amount
-      datetime date 
-    }
-    APPOINTMENT {
-      ulong appointment_id pk 
-      ulong shelter_id fk
-      ulong person_id fk
-      datetime date 
-    }
-    
-    TRANSFER {
-      ulong transfer_id pk
-      ulong animal_id fk 
-      ulong from_shelter fk
-      ulong to_shelter fk
-      datetime date 
-    }  
+    FOOD |o--|| PRODUCT : IsA
+    VACCINE |o--|| PRODUCT : IsA
 ```
