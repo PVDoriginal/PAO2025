@@ -1,6 +1,8 @@
-# PAO2025
+# Proiect PAO 2025
 
-# Dog and Cat Shelter 
+[cerintele proiectului] (https://github.com/deeas/PAO-2025/blob/master/Programare%20avansata%20pe%20obiecte%20-%20proiect%202025.pdf)
+
+# Adapost de Animale / Animal Shelter 
 
 I'll be making a java project that handles the operations of an animal shelter. 
 
