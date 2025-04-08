@@ -20,6 +20,14 @@ Se pot apela urmatoarele servicii:
 10. Se obtin toate animalele dintr-o anumita specie
 11. Se transfera un animal dintr-un adapost in altul
 
+Voi asigura persistenta urmatoarelor tipuri de obiecte folosing JDBC: 
+- Staff
+- Shelter
+- Animal
+- Payment
+
+Acestea f
+
 ```mermaid
 erDiagram
     PERSON ||--o{ ANIMAL : Adopts
