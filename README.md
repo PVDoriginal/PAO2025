@@ -26,8 +26,6 @@ Voi asigura persistenta urmatoarelor tipuri de obiecte folosing JDBC:
 - Animal
 - Payment
 
-Acestea f
-
 ```mermaid
 erDiagram
     PERSON ||--o{ ANIMAL : Adopts
