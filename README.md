@@ -18,7 +18,8 @@ Se pot apela urmatoarele servicii:
 8. O persoana este angajata la adapost
 9. Se plateste salariul unui angajat
 10. Se obtin toate animalele dintr-o anumita specie
-  
+11. Se transfera un animal dintr-un adapost in altul
+
 ```mermaid
 erDiagram
     PERSON ||--o{ ANIMAL : Adopts
