@@ -3,6 +3,7 @@ package org.shelter.classes;
 import org.javatuples.Pair;
 import org.shelter.interfaces.Persistent;
 
+import java.sql.Connection;
 import java.sql.Date;
 import java.util.Comparator;
 import java.util.Optional;
@@ -21,6 +22,12 @@ public class Payment implements Comparable<Payment>, Persistent {
 
     public int getAmount() { return amount; }
 
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "amount=" + amount +
+                '}';
+    }
 
     @Override
     public int compareTo(Payment p) {
@@ -56,8 +63,8 @@ public class Payment implements Comparable<Payment>, Persistent {
     }
 
     @Override
-    public void load(int pk) {
-        Optional<Vector<String>> values = load_table(pk);
+    public void load(int pk, Connection conn) {
+        Optional<Vector<String>> values = load_table(pk, conn);
         if (values.isEmpty()) { return; }
 
         amount = Integer.parseInt(values.get().elementAt(0));

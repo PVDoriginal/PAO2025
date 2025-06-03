@@ -1,48 +1,23 @@
 action,timestamp
-paying Madalina their salary,Wed Apr 09 18:28:10 EEST 2025
-Gigel rescued Dog1 in shelter1,Wed Apr 09 18:28:10 EEST 2025
-Gigel rescued Dog2 in shelter1,Wed Apr 09 18:28:10 EEST 2025
-Donald rescued Dog3 in shelter2,Wed Apr 09 18:28:10 EEST 2025
-Donald rescued Cat1 in shelter1,Wed Apr 09 18:28:10 EEST 2025
-Gigel rescued Cat2 in shelter3,Wed Apr 09 18:28:10 EEST 2025
-Donald rescued Fish1 in shelter3,Wed Apr 09 18:28:10 EEST 2025
-Gigel rescued Fish2 in shelter1,Wed Apr 09 18:28:10 EEST 2025
-Gigel rescued Fish3 in shelter1,Wed Apr 09 18:28:10 EEST 2025
-Gigel adopted Dog1 from shelter1,Wed Apr 09 18:28:10 EEST 2025
-Gigel adopted Dog3 from shelter1,Wed Apr 09 18:28:10 EEST 2025
-shelter1 gets Vaccine,Wed Apr 09 18:28:10 EEST 2025
-Gigel buys Vaccine from shelter1,Wed Apr 09 18:28:10 EEST 2025
-getting all animals in shelter1:,Wed Apr 09 18:28:10 EEST 2025
-Dog2,Wed Apr 09 18:28:10 EEST 2025
-Cat1,Wed Apr 09 18:28:10 EEST 2025
-Fish2,Wed Apr 09 18:28:10 EEST 2025
-Fish3,Wed Apr 09 18:28:10 EEST 2025
-getting sorted payments for Madalina:,Wed Apr 09 18:28:10 EEST 2025
-org.shelter.classes.Payment@533ddba,Wed Apr 09 18:28:10 EEST 2025
-checking if Dog food is food,Wed Apr 09 18:28:10 EEST 2025
-checking if Vaccine is food,Wed Apr 09 18:28:10 EEST 2025
-hiring Donald in shelter2,Wed Apr 09 18:28:10 EEST 2025
-paying Madalina their salary,Wed Apr 09 18:28:10 EEST 2025
-getting all animals of Cat:,Wed Apr 09 18:28:10 EEST 2025
-transfering Fish3 from shelter1 to shelter2,Wed Apr 09 18:28:10 EEST 2025
-Checking if table shelter exists,Wed Apr 09 18:28:10 EEST 2025
-SELECT * FROM shelter,Wed Apr 09 18:28:10 EEST 2025
-it does,Wed Apr 09 18:28:10 EEST 2025
-Checking if table staff exists,Wed Apr 09 18:28:10 EEST 2025
-SELECT * FROM staff,Wed Apr 09 18:28:10 EEST 2025
-it does,Wed Apr 09 18:28:10 EEST 2025
-Checking if table food exists,Wed Apr 09 18:28:10 EEST 2025
-SELECT * FROM food,Wed Apr 09 18:28:10 EEST 2025
-it doesn't,Wed Apr 09 18:28:10 EEST 2025
+paying Madalina their salary,Tue Jun 03 04:43:14 EEST 2025
+Checking if table shelter exists,Tue Jun 03 04:43:17 EEST 2025
+SELECT * FROM shelter,Tue Jun 03 04:43:17 EEST 2025
+it does,Tue Jun 03 04:43:17 EEST 2025
+Checking if table staff exists,Tue Jun 03 04:43:17 EEST 2025
+SELECT * FROM staff,Tue Jun 03 04:43:17 EEST 2025
+it does,Tue Jun 03 04:43:17 EEST 2025
+Checking if table food exists,Tue Jun 03 04:43:17 EEST 2025
+SELECT * FROM food,Tue Jun 03 04:43:17 EEST 2025
+it doesn't,Tue Jun 03 04:43:17 EEST 2025
 "SELECT * FROM shelter
 WHERE shelter_ID=0
-",Wed Apr 09 18:28:10 EEST 2025
+",Tue Jun 03 04:43:17 EEST 2025
 "SELECT * FROM shelter
 WHERE shelter_ID=1
-",Wed Apr 09 18:28:10 EEST 2025
+",Tue Jun 03 04:43:17 EEST 2025
 "UPDATE shelter SET
 name = ('newShelterName'),
 address = ('Bucuresti')
 
 WHERE shelter_ID=0
-",Wed Apr 09 18:28:10 EEST 2025
+",Tue Jun 03 04:43:17 EEST 2025

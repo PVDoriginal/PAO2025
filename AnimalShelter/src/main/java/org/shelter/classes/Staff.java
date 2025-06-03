@@ -3,6 +3,7 @@ package org.shelter.classes;
 import org.javatuples.Pair;
 import org.shelter.interfaces.Persistent;
 
+import java.sql.Connection;
 import java.util.Optional;
 import java.util.Vector;
 
@@ -63,8 +64,8 @@ public class Staff extends Person implements Persistent {
     }
 
     @Override
-    public void load(int pk) {
-        Optional<Vector<String>> values = load_table(pk);
+    public void load(int pk, Connection conn) {
+        Optional<Vector<String>> values = load_table(pk, conn);
         if (values.isEmpty()) { return; }
 
         setName(values.get().elementAt(0));

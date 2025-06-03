@@ -16,10 +16,8 @@ public interface Persistent {
     Vector<String> tableValues();
     int pk();
 
-    default void createIfNotExists() {
+    default void createIfNotExists(Connection conn) {
         try {
-            Connection conn = DriverManager.getConnection(URL);
-
             StringBuilder columns = new StringBuilder();
             for (Pair<String, String> column : tableColumns()) {
                 columns.append(",\n").append(column.getValue0()).append(" ").append(column.getValue1());
@@ -42,16 +40,14 @@ public interface Persistent {
             stmt.executeUpdate();
 
             stmt.close();
-            conn.close();
         }
         catch (SQLException e) {
             Logs.log(e.getMessage());
         }
     }
 
-    default void insert() {
+    default void insert(Connection conn) {
         try {
-            Connection conn = DriverManager.getConnection(URL);
             String sql = String.format(
                     """
                             INSERT INTO %s VALUES(%s%s)
@@ -71,17 +67,14 @@ public interface Persistent {
             stmt.executeUpdate();
 
             stmt.close();
-            conn.close();
         }
         catch (SQLException e) {
             Logs.log(e.getMessage());
         }
     }
 
-    default void update() {
+    default void update(Connection conn) {
         try {
-            Connection conn = DriverManager.getConnection(URL);
-
             StringBuilder names = new StringBuilder();
             for (Pair<String, String> column : tableColumns()) {
                 names.append(column.getValue0()).append(" = ?").append(",\n");
@@ -110,17 +103,14 @@ public interface Persistent {
             stmt.executeUpdate();
 
             stmt.close();
-            conn.close();
         }
         catch (SQLException e) {
             Logs.log(e.getMessage());
         }
     }
 
-    default void drop() {
+    default void drop(Connection conn) {
         try {
-            Connection conn = DriverManager.getConnection(URL);
-
             String sql = String.format(
                     """
                             DROP TABLE %s
@@ -133,19 +123,16 @@ public interface Persistent {
             stmt.executeUpdate();
 
             stmt.close();
-            conn.close();
         }
         catch (SQLException e) {
             Logs.log(e.getMessage());
         }
     }
 
-    void load(int pk);
+    void load(int pk, Connection conn);
 
-    default Optional<Vector<String>> load_table(int pk) {
+    default Optional<Vector<String>> load_table(int pk, Connection conn) {
         try {
-            Connection conn = DriverManager.getConnection(URL);
-
             String sql = String.format(
                     """
                         SELECT * FROM %s
@@ -168,7 +155,6 @@ public interface Persistent {
             }
 
             stmt.close();
-            conn.close();
 
             return Optional.of(values);
         }

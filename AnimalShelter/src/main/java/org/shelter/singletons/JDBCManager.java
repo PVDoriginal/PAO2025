@@ -14,7 +14,19 @@ public final class JDBCManager {
     static final String URL = "jdbc:postgresql://localhost/postgres?user=postgres&password=password";
     private static JDBCManager INSTANCE;
 
-    private JDBCManager() {}
+    private final Connection conn;
+
+    private JDBCManager() {
+        try {
+            conn = DriverManager.getConnection(URL);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Connection getConnection() {
+        return conn;
+    }
 
     public static JDBCManager getInstance() {
         if (INSTANCE == null) {
@@ -26,8 +38,6 @@ public final class JDBCManager {
     public Boolean checkIfTableExists(String tableName) {
         Logs.log("Checking if table " + tableName + " exists");
         try {
-            Connection conn = DriverManager.getConnection(URL);
-
             PreparedStatement stmt = conn.prepareStatement(String.format(
                     """
                             SELECT * FROM %s;

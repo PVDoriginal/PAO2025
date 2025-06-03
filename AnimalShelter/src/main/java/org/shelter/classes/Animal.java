@@ -4,6 +4,8 @@ import org.javatuples.Pair;
 import org.shelter.enums.Species;
 import org.shelter.interfaces.Persistent;
 
+import java.sql.Connection;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Vector;
 
@@ -37,6 +39,18 @@ public class Animal implements Persistent {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return Objects.equals(name, animal.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(name);
+    }
+
+    @Override
     public String tableName() {
         return "animals";
     }
@@ -67,8 +81,8 @@ public class Animal implements Persistent {
     }
 
     @Override
-    public void load(int pk) {
-        Optional<Vector<String>> values = load_table(pk);
+    public void load(int pk, Connection conn) {
+        Optional<Vector<String>> values = load_table(pk, conn);
         if (values.isEmpty()) { return; }
 
         name = values.get().elementAt(0);

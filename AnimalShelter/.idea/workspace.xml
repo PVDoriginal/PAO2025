@@ -5,26 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b263b4a9-625b-4157-9eda-9d369413fea3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Shelter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Vaccine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/enums/Species.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/enums/VaccineType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/interfaces/Persistent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/singletons/JDBCManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/utility/Initialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/utility/Logs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/shelter/utility/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/CRUD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/logs.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Shelter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Shelter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/classes/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/interfaces/Persistent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/interfaces/Persistent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shelter/singletons/JDBCManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shelter/singletons/JDBCManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,28 +48,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "extract.method.default.visibility": "public",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/pvd/UniRepos/PAO2025/AnimalShelter/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Perforce",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;public&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/pvd/UniRepos/PAO2025/AnimalShelter/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Perforce&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -97,7 +88,9 @@
       <updated>1744106247385</updated>
       <workItem from="1744106248468" duration="1077000" />
       <workItem from="1744107360858" duration="94000" />
-      <workItem from="1744107476950" duration="22149000" />
+      <workItem from="1744107476950" duration="22238000" />
+      <workItem from="1744289192967" duration="428000" />
+      <workItem from="1748910891343" duration="5826000" />
     </task>
     <servers />
   </component>
